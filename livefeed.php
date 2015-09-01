@@ -4,27 +4,22 @@
 
 	echo '<h1 style="margin-left:10px;color:3899c3;">Get my Azalead live feed</h1>';
     echo '<form method="get" action="" >';
-
     echo '<p>';
     echo 'Access token <br />';
     echo '<input type="text" name="token" />';
     echo '</p>';
-
     echo '<p>';
     echo 'Sort parameter (Examples: date, company_name, company_size, score)<br />';
     echo '<input type="text" name="sort" />';
     echo '</p>';
-
     echo '<p>';
     echo 'Start parameter <br />';
     echo '<input type="text" name="start" />';
     echo '</p>';
-
     echo '<p>';
     echo 'Limit parameter <br />';
     echo '<input type="text" name="limit" />';
     echo '</p>';
-
     echo '<p><input type="submit" name="cf-submitted" value="Get your live feed"/></p>';
     echo '</form></div>';
 
@@ -73,22 +68,13 @@ if (is_array($decodedData[0])) {
 		."</td><td>&nbsp;"
 		.$decodedData[$i]['lastVisit']."&nbsp;</td><td>&nbsp;"
 		.$decodedData[$i]['score']."&nbsp;</td>"
-		."</tr>";
-		
-		
+		."</tr>";	
 	}
 	echo "</table>";
-
 } else {
 	echo "<h2 style='color:3899c3'>Error :</h2>";
 	print_r($response);
 }
-
-
 curl_close($ch);
-
-
 }
-
-
 ?>
