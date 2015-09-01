@@ -4,7 +4,6 @@
 
 	echo '<h1>Refresh your token</h1>';
     echo '<form method="post" action="" >';
-
     echo '<p>';
     echo 'Given access token <br />';
     echo '<input type="text" name="token" />';
@@ -31,7 +30,7 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 //Getting the response from the API 
 $response = curl_exec($ch);
 $decodedData = json_decode($response);
-echo $decodedData;
+
 
 curl_close($ch);
 
