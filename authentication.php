@@ -4,12 +4,10 @@
 
 	echo '<h1>Authenticate to Azalead API</h1>';
     echo '<form method="post" action="" >';
-
     echo '<p>';
     echo 'Azalead username <br />';
     echo '<input type="text" name="username" />';
     echo '</p>';
-
     echo '<p>';
     echo 'Azalead password<br />';
     echo '<input type="text" name="password" />';
@@ -40,8 +38,5 @@ $decodedData = json_decode($response);
 echo $decodedData;
 
 curl_close($ch);
-
 }
-
-
 ?>
